@@ -9,4 +9,15 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        for 
+        i =0
+        k = 0
+        while i < len(nums):
+            if nums[i] !=  nums[k]:
+                k+=1
+                nums[k] = nums[i]
+            i+=1
+
+        return nums
+
+new = Solution()
+print(new.removeDuplicates([1,1,2,2,3,4]))
